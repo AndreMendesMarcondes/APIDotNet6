@@ -1,3 +1,4 @@
+using ADN.API.Config;
 using ADN.Data.Repositorio;
 using ADN.Domain.DTO.Settings;
 using ADN.Domain.Interfaces.Repositorio;
@@ -6,6 +7,7 @@ using ADN.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+SerilogConfig.AddSerilog(builder);
 builder.Services.Configure<MongoDBEstudanteSettings>(
     builder.Configuration.GetSection("MongoDBEstudanteSettings"));
 
