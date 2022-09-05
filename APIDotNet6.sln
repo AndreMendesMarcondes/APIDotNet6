@@ -9,6 +9,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - API", "0 - API", "{9E2D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADN.Domain", "ADN.Domain\ADN.Domain.csproj", "{CDA29B4C-01FA-4226-A035-98A311E40D9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Data", "2 - Data", "{1BEBDA85-52D6-4D50-8AE3-E8490B214F40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADN.Data", "ADN.Data\ADN.Data.csproj", "{222C7BBD-8249-4D3D-82B4-7C7F4082B47C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{756878BD-33D9-4530-B992-0AE0A30A8620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +25,17 @@ Global
 		{CDA29B4C-01FA-4226-A035-98A311E40D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDA29B4C-01FA-4226-A035-98A311E40D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA29B4C-01FA-4226-A035-98A311E40D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{222C7BBD-8249-4D3D-82B4-7C7F4082B47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{222C7BBD-8249-4D3D-82B4-7C7F4082B47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{222C7BBD-8249-4D3D-82B4-7C7F4082B47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{222C7BBD-8249-4D3D-82B4-7C7F4082B47C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CDA29B4C-01FA-4226-A035-98A311E40D9A} = {6DF19370-63F2-4106-A12F-71259CF17CC1}
+		{222C7BBD-8249-4D3D-82B4-7C7F4082B47C} = {1BEBDA85-52D6-4D50-8AE3-E8490B214F40}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33F20652-4915-45DF-A825-D43727B63798}
