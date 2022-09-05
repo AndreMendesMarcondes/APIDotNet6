@@ -1,4 +1,6 @@
-﻿using ADN.Domain.Interfaces.Services;
+﻿using ADN.Domain.Domain;
+using ADN.Domain.DTO.Estudante;
+using ADN.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADN.API.Controllers
@@ -18,6 +20,13 @@ namespace ADN.API.Controllers
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _service.GetAll());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Insert(EstudanteInsertDTO estudanteDTO)
+        {
+            await _service.Insert(estudanteDTO);
+            return StatusCode(201);
         }
     }
 }

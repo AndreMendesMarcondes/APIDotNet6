@@ -16,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IEstudanteService, EstudanteService>();
 builder.Services.AddScoped<IEstudanteRepositorio, EstudanteRepositorio>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
