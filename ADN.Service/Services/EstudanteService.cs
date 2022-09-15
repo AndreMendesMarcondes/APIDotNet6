@@ -23,10 +23,26 @@ namespace ADN.Service.Services
             _log = log;
         }
 
+        public async Task Delete(string id)
+        {
+            if (await _repositorio.GetById(id) != null)
+                await _repositorio.Delete(id);
+        }
+
         public async Task<List<Estudante>> GetAll()
         {
             _log.LogInformation("Buscando estudantes no service");
             return await _repositorio.GetAll();
+        }
+
+        public async Task<Estudante?> GetById(string id)
+        {
+            var list = await _repositorio.GetById(id);
+
+            if (list.Any())
+                return list.FirstOrDefault();
+
+            return null;
         }
 
         public async Task Insert(EstudanteInsertDTO estudanteDTO)
@@ -43,7 +59,19 @@ namespace ADN.Service.Services
             {
                 _log.LogError(ex, "Erro ao salvar estudante");
                 throw;
-            }   
+            }
+        }
+
+        public async Task Update(string id, EstudanteInsertDTO estudanteDTO)
+        {
+            var estudante = await GetById(id);
+            if (estudante != null)
+            {
+                estudante = _mapper.Map<Estudante>(estudanteDTO);
+                estudante.Id = id;
+
+                await _repositorio.Update(estudante);
+            }
         }
     }
 }

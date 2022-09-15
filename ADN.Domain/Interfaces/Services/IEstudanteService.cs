@@ -7,5 +7,8 @@ namespace ADN.Domain.Interfaces.Services
     {
         Task<List<Estudante>> GetAll();
         Task Insert(EstudanteInsertDTO estudante);
+        Task<Estudante?> GetById(string id);
+        Task Update(string id, EstudanteInsertDTO estudante);
+        Task Delete(string id);
     }
 }

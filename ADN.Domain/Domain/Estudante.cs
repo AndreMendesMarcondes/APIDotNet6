@@ -7,7 +7,7 @@ namespace ADN.Domain.Domain
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        private string Id { get; set; }
+        public string Id { get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
         public DateTime DataNascimento { get; set; }
